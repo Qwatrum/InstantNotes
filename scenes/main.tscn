@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://crrnm1t6ewxso"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_8oia1"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_8oia1")
+
+[node name="Window" type="Window" parent="."]
+position = Vector2i(100, 100)
+always_on_top = true
+
+[node name="Label" type="Label" parent="Window"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "hi"
+horizontal_alignment = 1
+
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
